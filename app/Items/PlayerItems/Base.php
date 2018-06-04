@@ -13,6 +13,7 @@ abstract class Base implements Item
 {
     protected $name;
     protected $description;
+    protected $isMagic = false;
     protected $rulesToUse;
 
     public function __construct()
@@ -45,4 +46,16 @@ abstract class Base implements Item
     abstract public function effect() : array;
 
     protected function configureCustomRules(){}
+
+    protected function makeItemMagic()
+    {
+        $this->isMagic = true;
+
+        return $this;
+    }
+
+    protected function isMagic() : bool
+    {
+        return $this->isMagic;
+    }
 }

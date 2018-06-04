@@ -1,19 +1,19 @@
 <?php
 
-namespace Adelf\CoolRPG\Player\Bags;
+namespace Adelf\CoolRPG\Items\PlayerItems\Bags;
 
 
 use Adelf\CoolRPG\Items\RulesToUse\Constants;
 
-class LuxuryBag extends Base
+class CommonBag extends Base
 {
-    protected $space = 30;
+    protected $space = 15;
 
     protected function configureCustomRules()
     {
         $this->rulesToUse->addPlayerRules([
             'level' => [
-                Constants::BIGGER_OR_EQUAL => 10,
+                Constants::BIGGER_OR_EQUAL => 5,
             ]
         ]);
     }

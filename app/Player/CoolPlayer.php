@@ -4,7 +4,7 @@ namespace Adelf\CoolRPG\Player;
 
 
 use Adelf\CoolRPG\Interfaces\Bag;
-use Adelf\CoolRPG\Player\Bags\PoorBag;
+use Adelf\CoolRPG\Items\PlayerItems\Bags\PoorBag;
 use Adelf\CoolRPG\Stats\Player\Stats;
 
 class CoolPlayer

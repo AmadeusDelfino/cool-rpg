@@ -1,13 +1,13 @@
 <?php
 
-namespace Adelf\CoolRPG\Player\Bags;
+namespace Adelf\CoolRPG\Items\PlayerItems\Bags;
 
 
 use Adelf\CoolRPG\Interfaces\Bag;
 use Adelf\CoolRPG\Interfaces\Item;
 use Adelf\CoolRPG\Items\Effects\PlayerEffect;
 use Adelf\CoolRPG\Items\PlayerItems\Base as ItemBase;
-use Adelf\CoolRPG\Player\Bags\ItemControl\ItemsList;
+use Adelf\CoolRPG\Items\PlayerItems\Bags\ItemControl\ItemsList;
 
 abstract class Base extends ItemBase implements Bag
 {

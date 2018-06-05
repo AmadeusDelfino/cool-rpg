@@ -4,10 +4,12 @@ namespace Adelf\CoolRPG\Player;
 
 
 use Adelf\CoolRPG\Interfaces\Bag;
+use Adelf\CoolRPG\Personate\Common;
 use Adelf\CoolRPG\Stats\Player\Stats;
 
-class CoolPlayer
+class CoolPlayer extends Common
 {
+    /** @var Stats */
     protected $stats;
     protected $bag;
 
@@ -15,18 +17,9 @@ class CoolPlayer
      * CoolPlayer constructor.
      * @throws \Exception
      */
-    public function __construct()
+    protected function warmupPersona() : void
     {
         $this->stats = new Stats();
-
-        $this->warmupPlayer();
-    }
-
-    /**
-     * @throws \Exception
-     */
-    protected function warmupPlayer()
-    {
         $this->stats->initCommonAttributes();
         $this->stats->calculateMaxLife();
         $this->stats->life()->changeCurrentLife($this->stats->life()->getMaxLife());

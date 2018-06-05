@@ -9,8 +9,8 @@ abstract class Common
 
     public function __construct()
     {
-        $this->configureStats();
+        $this->warmupPersona();
     }
 
-    abstract protected function configureStats(): void;
+    abstract protected function warmupPersona(): void;
 }

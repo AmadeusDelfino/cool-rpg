@@ -3,21 +3,16 @@
 namespace Adelf\CoolRPG\NPC;
 
 
+use Adelf\CoolRPG\Personate\Common;
 use Adelf\CoolRPG\Stats\Player\Stats;
 
-class CoolNPC
+class CoolNPC extends Common
 {
     protected $stats;
 
-    public function __construct()
+    protected function warmupPersona(): void
     {
         $this->stats = new Stats();
-
-        $this->warmupNPC();
-    }
-
-    private function warmupNPC()
-    {
         $this->stats->initCommonAttributes();
         $this->stats->calculateMaxLife();
         $this->stats->life()->changeCurrentLife($this->stats->life()->getMaxLife());

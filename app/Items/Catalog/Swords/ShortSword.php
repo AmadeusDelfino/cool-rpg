@@ -15,4 +15,9 @@ class ShortSword extends Base
     {
         return new D6();
     }
+
+    public function size(): string
+    {
+        return $this::SMALL_SIZE;
+    }
 }

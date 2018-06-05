@@ -22,4 +22,8 @@ abstract class Base extends WeaponBase
         return [$effect];
     }
 
+    public function size(): string
+    {
+        return $this::MEDIUM_SIZE;
+    }
 }

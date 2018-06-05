@@ -25,7 +25,7 @@ class LongSword extends Base
                     Constants::BIGGER_OR_EQUAL => 8
                 ],
                 Constants::LEVEL => [
-                    Constants::BIGGER => 1,
+                    Constants::BIGGER => 3,
                 ],
             ]);
     }

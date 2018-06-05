@@ -11,4 +11,8 @@ interface Weapon
     public function setDamageModify(int $damageModify): void;
     public function getHitModify(): int;
     public function setHitModify(int $hitModify): void;
+    public function isTwoHanded(): bool;
+    public function setTwoHanded(bool $twoHanded);
+    public function size(): string;
+
 }

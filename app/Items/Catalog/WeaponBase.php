@@ -12,12 +12,21 @@ abstract class WeaponBase extends Base implements Weapon
     CONST CONTUSION_DAMAGE = 'contusion_damage';
     CONST PIERCING_DAMAGE = 'piercing_damage';
 
+    CONST SMALL_SIZE = 'small';
+    CONST MEDIUM_SIZE = 'medium';
+    CONST LARGE_SIZE = 'large';
+    CONST VERY_LARGE_SIZE = 'very_large';
+
     protected $hitModify = 0;
     protected $damageModify = 0;
+
+    protected $twoHanded = false;
 
     abstract public function damageDice(): Dice;
 
     abstract public function damageType(): string;
+
+    abstract public function size(): string;
 
     /**
      * @return int
@@ -50,4 +59,24 @@ abstract class WeaponBase extends Base implements Weapon
     {
         $this->damageModify = $damageModify;
     }
+
+    /**
+     * @return bool
+     */
+    public function isTwoHanded() : bool
+    {
+        return $this->twoHanded;
+    }
+
+    /**
+     * @param bool $twoHanded
+     * @return WeaponBase
+     */
+    public function setTwoHanded(bool $twoHanded)
+    {
+        $this->twoHanded = $twoHanded;
+
+        return $this;
+    }
+
 }

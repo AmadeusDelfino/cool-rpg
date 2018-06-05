@@ -17,4 +17,9 @@ abstract class SpellCasterWeaponBase extends WeaponBase
             'healer' => $this->magicHealerModify,
         ];
     }
+
+    public function size(): string
+    {
+        return $this::MEDIUM_SIZE;
+    }
 }

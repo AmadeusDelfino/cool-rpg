@@ -5,6 +5,7 @@ namespace Adelf\CoolRPG\Player;
 
 use Adelf\CoolRPG\Interfaces\Bag;
 use Adelf\CoolRPG\Personate\Common;
+use Adelf\CoolRPG\Player\Equips\EquipsControl;
 use Adelf\CoolRPG\Stats\Player\Stats;
 
 class CoolPlayer extends Common
@@ -12,6 +13,8 @@ class CoolPlayer extends Common
     /** @var Stats */
     protected $stats;
     protected $bag;
+    /** @var EquipsControl */
+    protected $equips;
 
     /**
      * CoolPlayer constructor.
@@ -20,6 +23,8 @@ class CoolPlayer extends Common
     protected function warmupPersona() : void
     {
         $this->stats = new Stats();
+        $this->equips = new EquipsControl();
+
         $this->stats->initCommonAttributes();
         $this->stats->calculateMaxLife();
         $this->stats->life()->changeCurrentLife($this->stats->life()->getMaxLife());
@@ -48,4 +53,12 @@ class CoolPlayer extends Common
 
         return $this;
     }
+
+    public function getDefenseValue() : int
+    {
+        $defenseModify  = is_null($this->equips->getShield()) ? 0 : $this->equips->getShield()->getDefenseModify();
+
+        return $this->stats->getDefenseValue($defenseModify);
+    }
+
 }

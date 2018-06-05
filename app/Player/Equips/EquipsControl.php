@@ -60,4 +60,52 @@ class EquipsControl
 
         return true;
     }
+
+    /**
+     * @return WeaponBase
+     */
+    public function getWeapon(): ?WeaponBase
+    {
+        return $this->weapon;
+    }
+
+    /**
+     * @return ShieldBase
+     */
+    public function getShield(): ?ShieldBase
+    {
+        return $this->shield;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getHelmet()
+    {
+        return $this->helmet;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getArmor()
+    {
+        return $this->armor;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPants()
+    {
+        return $this->pants;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getShoes()
+    {
+        return $this->shoes;
+    }
 }

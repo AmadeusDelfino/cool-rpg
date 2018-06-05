@@ -46,7 +46,7 @@ class LifeControl
         return $this;
     }
 
-    public function changeCurrentLife(int $life)
+    public function changeCurrentLife(float $life)
     {
         $this->currentLife = $life;
 
@@ -73,9 +73,9 @@ class LifeControl
     }
 
     /**
-     * @return int
+     * @return float
      */
-    public function getMaxLife(): int
+    public function getMaxLife(): float
     {
         return $this->maxLife;
     }

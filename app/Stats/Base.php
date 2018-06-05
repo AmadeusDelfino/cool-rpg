@@ -5,6 +5,7 @@ namespace Adelf\CoolRPG\Stats;
 use Adelf\Config\Config;
 use Adelf\CoolRPG\Player\Level\LevelControl;
 use Adelf\CoolRPG\Player\Life\LifeControl;
+use Adelf\CoolRPG\Support\Handlers\CalculateDefenseValueValue;
 use Adelf\CoolRPG\Support\Handlers\CalculateLifeValue;
 
 abstract class Base
@@ -129,5 +130,10 @@ abstract class Base
     public function level()
     {
         return $this->level;
+    }
+
+    public function getDefenseValue($shieldModify = 0)
+    {
+        return (new CalculateDefenseValueValue())($this->getDexterity(), $shieldModify);
     }
 }

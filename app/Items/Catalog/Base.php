@@ -47,14 +47,14 @@ abstract class Base implements Item
 
     protected function configureCustomRules(){}
 
-    protected function makeItemMagic()
+    public function makeItemMagic()
     {
         $this->isMagic = true;
 
         return $this;
     }
 
-    protected function isMagic() : bool
+    public function isMagic() : bool
     {
         return $this->isMagic;
     }

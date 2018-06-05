@@ -3,8 +3,13 @@
 namespace Adelf\CoolRPG\Personate;
 
 
+use Adelf\CoolRPG\Exceptions\ActionDontExistsException;
+use Adelf\CoolRPG\Traits\InstanceOfClass;
+
 abstract class Common
 {
+    use InstanceOfClass;
+
     protected $stats;
 
     public function __construct()
@@ -13,4 +18,15 @@ abstract class Common
     }
 
     abstract protected function warmupPersona(): void;
+
+    /**
+     * @param $action
+     * @param array|null $args
+     * @return mixed
+     * @throws ActionDontExistsException
+     */
+    public function doAction($action, ?array $args)
+    {
+        return (new ActionBus())($action, $args);
+    }
 }

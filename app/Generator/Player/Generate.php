@@ -8,7 +8,7 @@ use Adelf\CoolRPG\Player\CoolPlayer;
 
 class Generate
 {
-    public function __invoke()
+    public function __invoke() : CoolPlayer
     {
         $defaultBag = Config::instance()->get('items.new_player.bag');
 

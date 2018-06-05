@@ -1,9 +1,9 @@
 <?php
 
-namespace Adelf\CoolRPG\Player\Actions;
+namespace Adelf\CoolRPG\Personate\Actions;
 
 
-class Base
+abstract class Base
 {
     protected $name;
     protected $description;

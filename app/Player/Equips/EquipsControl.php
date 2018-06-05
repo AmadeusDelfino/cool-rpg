@@ -33,7 +33,7 @@ class EquipsControl
      * @return EquipsControl
      * @throws CantUseTwoHandedWeaponException
      */
-    protected function useWeapon(Weapon $weapon)
+    public function useWeapon(Weapon $weapon)
     {
         if($weapon->isTwoHanded() && ! $this->canUseTwoHandedWeapon()) {
             throw new CantUseTwoHandedWeaponException();

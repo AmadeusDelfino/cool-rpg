@@ -4,6 +4,7 @@ namespace Adelf\CoolRPG\Player\Life;
 
 
 use Adelf\CoolRPG\Support\Handlers\CalculateLifeValue;
+use Adelf\CoolRPG\Support\Handlers\FormatFloatNumbers;
 
 class LifeControl
 {
@@ -26,7 +27,7 @@ class LifeControl
     /**
      * @return int
      */
-    public function getCurrentLife(): int
+    public function getCurrentLife(): float
     {
         return $this->currentLife;
     }
@@ -39,7 +40,7 @@ class LifeControl
         return $this->historyLifeByLevel;
     }
 
-    public function changeMaxLife(int $life)
+    public function changeMaxLife(float $life)
     {
         $this->maxLife = $life;
 
@@ -77,6 +78,6 @@ class LifeControl
      */
     public function getMaxLife(): float
     {
-        return $this->maxLife;
+        return (new FormatFloatNumbers())($this->maxLife);
     }
 }

@@ -1,12 +1,12 @@
 <?php
 
-namespace Adelf\CoolRPG\Player\Actions;
+namespace Adelf\CoolRPG\Personate\Actions;
 
 
 use Adelf\CoolRPG\Dices\D20;
 use Adelf\CoolRPG\Interfaces\Weapon;
 
-class Attack extends Base
+class AttackAction extends Base
 {
     protected $name = 'Ataque';
     protected $description = 'Ação de atacar algo';

@@ -30,6 +30,30 @@ class CoolPlayer extends Common
         $this->stats->life()->changeCurrentLife($this->stats->life()->getMaxLife());
     }
 
+    public function getDefenseValue() : int
+    {
+        $defenseModify  = is_null($this->equips->getShield()) ? 0 : $this->equips->getShield()->getDefenseModify();
+
+        return $this->stats->getDefenseValue($defenseModify);
+    }
+
+    public function defineBag(Bag $bag)
+    {
+        $this->bag = $bag;
+
+        return $this;
+    }
+
+    public function levelUp($levels = 1)
+    {
+        for(;$levels > 0;$levels--){
+            $this->stats->addLevel();
+        }
+    }
+
+    /*
+     * Access facilitators
+     */
     public function bag() : Bag
     {
         return $this->bag;
@@ -40,25 +64,8 @@ class CoolPlayer extends Common
         return $this->stats;
     }
 
-    public function levelUp($levels = 1)
+    public function equips() : EquipsControl
     {
-        for(;$levels > 0;$levels--){
-            $this->stats->addLevel();
-        }
+        return $this->equips;
     }
-
-    public function defineBag(Bag $bag)
-    {
-        $this->bag = $bag;
-
-        return $this;
-    }
-
-    public function getDefenseValue() : int
-    {
-        $defenseModify  = is_null($this->equips->getShield()) ? 0 : $this->equips->getShield()->getDefenseModify();
-
-        return $this->stats->getDefenseValue($defenseModify);
-    }
-
 }

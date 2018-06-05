@@ -10,4 +10,16 @@ class Constants
 
     CONST LESS = '<';
     CONST LESS_OR_EQUAL = '=<';
+
+    /**
+     * Stat names
+     */
+    CONST LEVEL = 'level';
+    CONST STRENGTH = 'strength';
+    CONST DEXTERITY = 'dexterity';
+    CONST CHARISMA = 'charisma';
+    CONST FAITH = 'faith';
+    CONST WISDOM = 'wisdom';
+    CONST INTELLIGENCE = 'intelligence';
+    CONST CONSTITUTION = 'constitution';
 }

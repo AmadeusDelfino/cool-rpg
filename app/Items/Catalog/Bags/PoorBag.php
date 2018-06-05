@@ -1,6 +1,6 @@
 <?php
 
-namespace Adelf\CoolRPG\Items\PlayerItems\Bags;
+namespace Adelf\CoolRPG\Items\Catalog\Bags;
 
 
 class PoorBag extends Base

@@ -1,15 +1,15 @@
 <?php
 
-namespace Adelf\CoolRPG\Items\PlayerItems\Swords;
+namespace Adelf\CoolRPG\Items\Catalog\Commons;
 
 use Adelf\CoolRPG\Items\Effects\EnemyEffect;
-use Adelf\CoolRPG\Items\PlayerItems\WeaponBase;
+use Adelf\CoolRPG\Items\Catalog\WeaponBase;
 
 abstract class Base extends WeaponBase
 {
     public function damageType(): string
     {
-        return $this::SLASHING_DAMAGE;
+        return $this::CONTUSION_DAMAGE;
     }
 
     public function effect(): array

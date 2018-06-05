@@ -1,6 +1,6 @@
 <?php
 
-namespace Adelf\CoolRPG\Items\PlayerItems\Bags\ItemControl;
+namespace Adelf\CoolRPG\Items\Catalog\Bags\ItemControl;
 
 
 use Adelf\CoolRPG\Interfaces\Item;

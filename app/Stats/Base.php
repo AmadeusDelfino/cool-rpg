@@ -37,9 +37,6 @@ abstract class Base
 
     abstract protected function configureMaxAttributeValue();
 
-    /**
-     * @throws \Exception
-     */
     public function initCommonAttributes()
     {
         $minValue = Config::instance()->get('stats.player.initial_minimum_attribute_value');

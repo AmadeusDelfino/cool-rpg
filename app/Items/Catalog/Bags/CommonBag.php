@@ -1,6 +1,6 @@
 <?php
 
-namespace Adelf\CoolRPG\Items\PlayerItems\Bags;
+namespace Adelf\CoolRPG\Items\Catalog\Bags;
 
 
 use Adelf\CoolRPG\Items\RulesToUse\Constants;

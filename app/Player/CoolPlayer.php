@@ -4,7 +4,6 @@ namespace Adelf\CoolRPG\Player;
 
 
 use Adelf\CoolRPG\Interfaces\Bag;
-use Adelf\CoolRPG\Items\PlayerItems\Bags\PoorBag;
 use Adelf\CoolRPG\Stats\Player\Stats;
 
 class CoolPlayer
@@ -18,7 +17,6 @@ class CoolPlayer
      */
     public function __construct()
     {
-        $this->bag = new PoorBag();
         $this->stats = new Stats();
 
         $this->warmupPlayer();
@@ -49,5 +47,12 @@ class CoolPlayer
         for(;$levels > 0;$levels--){
             $this->stats->addLevel();
         }
+    }
+
+    public function defineBag(Bag $bag)
+    {
+        $this->bag = $bag;
+
+        return $this;
     }
 }

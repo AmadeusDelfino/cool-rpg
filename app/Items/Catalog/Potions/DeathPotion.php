@@ -1,6 +1,6 @@
 <?php
 
-namespace Adelf\CoolRPG\Items\PlayerItems\Potions;
+namespace Adelf\CoolRPG\Items\Catalog\Potions;
 
 use Adelf\CoolRPG\Items\Effects\PlayerEffect;
 

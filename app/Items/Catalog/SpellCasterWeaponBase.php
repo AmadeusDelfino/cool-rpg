@@ -1,6 +1,6 @@
 <?php
 
-namespace Adelf\CoolRPG\Items\PlayerItems;
+namespace Adelf\CoolRPG\Items\Catalog;
 
 
 abstract class SpellCasterWeaponBase extends WeaponBase

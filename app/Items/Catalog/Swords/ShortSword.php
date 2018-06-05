@@ -1,6 +1,6 @@
 <?php
 
-namespace Adelf\CoolRPG\Items\PlayerItems\Swords;
+namespace Adelf\CoolRPG\Items\Catalog\Swords;
 
 
 use Adelf\CoolRPG\Dices\D6;

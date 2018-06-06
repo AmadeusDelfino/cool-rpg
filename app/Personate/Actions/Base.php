@@ -7,7 +7,6 @@ abstract class Base
 {
     protected $name;
     protected $description;
-
     protected $item;
 
     public function getItem()

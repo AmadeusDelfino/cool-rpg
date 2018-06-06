@@ -44,4 +44,20 @@ class StatsTest extends TestCase
         $this->assertNotEquals(0, $stats->getStrength());
         $this->assertNotEquals(0, $stats->getWisdom());
     }
+
+    /**
+     * @param Base $stats
+     * @dataProvider stats_data_provider
+     */
+    public function test_level_interaction(Base $stats)
+    {
+        $stats->level()->addLevel(10);
+        $this->assertEquals(11, $stats->level()->getLevel());
+
+        $stats->level()->removeLevel(5);
+        $this->assertEquals(6, $stats->level()->getLevel());
+
+        $stats->level()->incrementLevel();
+        $this->assertEquals(7, $stats->level()->getLevel());
+    }
 }

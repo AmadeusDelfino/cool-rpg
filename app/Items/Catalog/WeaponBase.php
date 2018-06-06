@@ -38,10 +38,13 @@ abstract class WeaponBase extends Base implements Weapon
 
     /**
      * @param int $hitModify
+     * @return WeaponBase
      */
-    public function setHitModify(int $hitModify): void
+    public function setHitModify(int $hitModify)
     {
         $this->hitModify = $hitModify;
+
+        return $this;
     }
 
     /**
@@ -54,10 +57,13 @@ abstract class WeaponBase extends Base implements Weapon
 
     /**
      * @param int $damageModify
+     * @return WeaponBase
      */
-    public function setDamageModify(int $damageModify): void
+    public function setDamageModify(int $damageModify)
     {
         $this->damageModify = $damageModify;
+
+        return $this;
     }
 
     /**

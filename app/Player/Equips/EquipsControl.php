@@ -3,6 +3,7 @@
 namespace Adelf\CoolRPG\Player\Equips;
 
 
+use Adelf\CoolRPG\Exceptions\CantUseShieldException;
 use Adelf\CoolRPG\Exceptions\CantUseTwoHandedWeaponException;
 use Adelf\CoolRPG\Interfaces\Weapon;
 use Adelf\CoolRPG\Items\Catalog\ShieldBase;
@@ -19,13 +20,26 @@ class EquipsControl
     protected $pants;
     protected $shoes;
 
-    protected function canUseShield()
+    /**
+     * @param ShieldBase $shield
+     * @return bool
+     */
+    protected function canUseShield(ShieldBase $shield) : bool
     {
         if(is_null($this->weapon)) {
             return true;
         }
 
-        return ! $this->weapon->isTwoHanded();
+        if($this->weapon->isTwoHanded()) {
+            return false;
+        }
+
+        if(($shield->size() === WeaponBase::LARGE_SIZE || $shield->size() === WeaponBase::VERY_LARGE_SIZE)
+            && $this->weapon->size() !== WeaponBase::SMALL_SIZE) {
+            return false;
+        }
+
+        return true;
     }
 
     /**
@@ -44,17 +58,25 @@ class EquipsControl
         return $this;
     }
 
+    /**
+     * @param ShieldBase $shield
+     * @return EquipsControl
+     * @throws CantUseShieldException
+     */
+    public function useShield(ShieldBase $shield)
+    {
+        if(! $this->canUseShield($shield)) {
+            throw new CantUseShieldException();
+        }
+
+        $this->shield = $shield;
+
+        return $this;
+    }
+
     protected function canUseTwoHandedWeapon(): bool
     {
-        if(is_null($this->shield)) {
-            return true;
-        }
-
-        if($this->shield->size() === WeaponBase::LARGE_SIZE) {
-            return false;
-        }
-
-        if($this->shield->size() === WeaponBase::VERY_LARGE_SIZE) {
+        if(! is_null($this->shield)) {
             return false;
         }
 

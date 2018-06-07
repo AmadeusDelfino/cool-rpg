@@ -2,7 +2,6 @@
 
 namespace Adelf\CoolRPG\Generator\NPC;
 
-
 use Adelf\CoolRPG\NPC\CoolNPC;
 
 class Generate

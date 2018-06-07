@@ -2,7 +2,6 @@
 
 namespace Adelf\CoolRPG\Interfaces;
 
-
 interface Dice
 {
     public function roll();

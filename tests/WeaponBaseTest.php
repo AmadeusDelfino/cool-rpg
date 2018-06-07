@@ -2,7 +2,6 @@
 
 namespace Adelf\CoolRPG\Tests;
 
-
 use Adelf\CoolRPG\Items\Catalog\Commons\Rock;
 use Adelf\CoolRPG\Items\Catalog\Swords\GreaterSword;
 use Adelf\CoolRPG\Items\Catalog\Swords\LongSword;

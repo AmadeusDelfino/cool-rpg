@@ -2,7 +2,6 @@
 
 namespace Adelf\CoolRPG\Tests;
 
-
 use Adelf\CoolRPG\Items\Catalog\ShieldBase;
 use Adelf\CoolRPG\Items\Catalog\Shields\BucklerShield;
 use Adelf\CoolRPG\Items\Catalog\Shields\LargeShield;

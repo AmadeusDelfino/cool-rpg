@@ -2,8 +2,8 @@
 
 namespace Adelf\CoolRPG\Items\Catalog\Swords;
 
-use Adelf\CoolRPG\Items\Effects\EnemyEffect;
 use Adelf\CoolRPG\Items\Catalog\WeaponBase;
+use Adelf\CoolRPG\Items\Effects\EnemyEffect;
 
 abstract class Base extends WeaponBase
 {

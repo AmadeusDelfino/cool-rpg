@@ -2,7 +2,6 @@
 
 namespace Adelf\CoolRPG\Items\Catalog;
 
-
 abstract class SpellCasterWeaponBase extends WeaponBase
 {
     protected $magicHitModify = 0;
@@ -12,7 +11,7 @@ abstract class SpellCasterWeaponBase extends WeaponBase
     protected function magicModifies() : array
     {
         return [
-            'hit' => $this->magicHitModify,
+            'hit'    => $this->magicHitModify,
             'damage' => $this->magicDamageModify,
             'healer' => $this->magicHealerModify,
         ];

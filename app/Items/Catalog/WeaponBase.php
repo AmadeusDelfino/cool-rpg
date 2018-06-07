@@ -2,15 +2,14 @@
 
 namespace Adelf\CoolRPG\Items\Catalog;
 
-
 use Adelf\CoolRPG\Interfaces\Dice;
 use Adelf\CoolRPG\Interfaces\Weapon;
 
 abstract class WeaponBase extends Base implements Weapon
 {
-    CONST SLASHING_DAMAGE = 'slashing_damage';
-    CONST CONTUSION_DAMAGE = 'contusion_damage';
-    CONST PIERCING_DAMAGE = 'piercing_damage';
+    const SLASHING_DAMAGE = 'slashing_damage';
+    const CONTUSION_DAMAGE = 'contusion_damage';
+    const PIERCING_DAMAGE = 'piercing_damage';
 
     protected $hitModify = 0;
     protected $damageModify = 0;
@@ -33,6 +32,7 @@ abstract class WeaponBase extends Base implements Weapon
 
     /**
      * @param int $hitModify
+     *
      * @return WeaponBase
      */
     public function setHitModify(int $hitModify)
@@ -52,6 +52,7 @@ abstract class WeaponBase extends Base implements Weapon
 
     /**
      * @param int $damageModify
+     *
      * @return WeaponBase
      */
     public function setDamageModify(int $damageModify)
@@ -71,6 +72,7 @@ abstract class WeaponBase extends Base implements Weapon
 
     /**
      * @param bool $twoHanded
+     *
      * @return WeaponBase
      */
     public function setTwoHanded(bool $twoHanded)
@@ -79,5 +81,4 @@ abstract class WeaponBase extends Base implements Weapon
 
         return $this;
     }
-
 }

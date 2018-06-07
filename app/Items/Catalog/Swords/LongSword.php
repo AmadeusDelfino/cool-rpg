@@ -11,7 +11,7 @@ class LongSword extends Base
     protected $name = 'Espada longa';
     protected $description = 'Espada longa feita de um metal leve';
 
-    function damageDice(): Dice
+    public function damageDice(): Dice
     {
         return new D8();
     }
@@ -22,7 +22,7 @@ class LongSword extends Base
             ->rulesToUse
             ->addPlayerRules([
                 Constants::STRENGTH => [
-                    Constants::BIGGER_OR_EQUAL => 8
+                    Constants::BIGGER_OR_EQUAL => 8,
                 ],
                 Constants::LEVEL => [
                     Constants::BIGGER => 3,

@@ -2,7 +2,6 @@
 
 namespace Adelf\CoolRPG\Personate\Actions;
 
-
 abstract class Base
 {
     protected $name;

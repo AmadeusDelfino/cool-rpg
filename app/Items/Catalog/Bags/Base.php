@@ -2,12 +2,11 @@
 
 namespace Adelf\CoolRPG\Items\Catalog\Bags;
 
-
 use Adelf\CoolRPG\Interfaces\Bag;
 use Adelf\CoolRPG\Interfaces\Item;
-use Adelf\CoolRPG\Items\Effects\PlayerEffect;
-use Adelf\CoolRPG\Items\Catalog\Base as ItemBase;
 use Adelf\CoolRPG\Items\Catalog\Bags\ItemControl\ItemsList;
+use Adelf\CoolRPG\Items\Catalog\Base as ItemBase;
+use Adelf\CoolRPG\Items\Effects\PlayerEffect;
 
 abstract class Base extends ItemBase implements Bag
 {

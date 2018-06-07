@@ -2,14 +2,13 @@
 
 namespace Adelf\CoolRPG\Interfaces;
 
-
 interface Bag
 {
     public function remainingSpace() : int;
 
-    public function add($item) : Bag;
+    public function add($item) : self;
 
-    public function remove($indexItem) : Bag;
+    public function remove($indexItem) : self;
 
     public function addGold(int $gold);
 

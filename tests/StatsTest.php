@@ -2,7 +2,6 @@
 
 namespace Adelf\CoolRPG\Tests;
 
-
 use Adelf\CoolRPG\Stats\Base;
 use Adelf\CoolRPG\Stats\NPC\Stats as NPCStats;
 use Adelf\CoolRPG\Stats\Player\Stats as PlayerStats;

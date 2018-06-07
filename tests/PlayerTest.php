@@ -2,7 +2,6 @@
 
 namespace Adelf\CoolRPG\Tests;
 
-
 use Adelf\CoolRPG\Generator\Player\Generate;
 use Adelf\CoolRPG\Personate\Equips\EquipsControl;
 use Adelf\CoolRPG\Player\CoolPlayer;
@@ -58,7 +57,7 @@ class PlayerTest extends TestCase
     {
         $levelUp = random_int(1, 20);
         $player->levelUp($levelUp);
-        $this->assertEquals(1+$levelUp, $player->stats()->level()->getLevel());
+        $this->assertEquals(1 + $levelUp, $player->stats()->level()->getLevel());
     }
 
     /**

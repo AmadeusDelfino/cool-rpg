@@ -2,7 +2,6 @@
 
 namespace Adelf\CoolRPG\Items\Catalog\Bags;
 
-
 use Adelf\CoolRPG\Items\RulesToUse\Constants;
 
 class LuxuryBag extends Base
@@ -14,7 +13,7 @@ class LuxuryBag extends Base
         $this->rulesToUse->addPlayerRules([
             'level' => [
                 Constants::BIGGER_OR_EQUAL => 10,
-            ]
+            ],
         ]);
     }
 }

@@ -2,7 +2,6 @@
 
 namespace Adelf\CoolRPG\Generator\Player;
 
-
 use Adelf\Config\Config;
 use Adelf\CoolRPG\Player\CoolPlayer;
 
@@ -14,7 +13,7 @@ class Generate
 
         $player = new CoolPlayer();
 
-        $player->defineBag(new $defaultBag);
+        $player->defineBag(new $defaultBag());
         $this->addDefaultItems($player);
         $this->addDefaultGolden($player);
 
@@ -25,10 +24,10 @@ class Generate
     {
         $items = Config::instance()->get('items.new_player.items');
 
-        foreach($items as $item) {
+        foreach ($items as $item) {
             $player
                 ->bag()
-                ->add(new $item);
+                ->add(new $item());
         }
     }
 

@@ -2,7 +2,6 @@
 
 namespace Adelf\CoolRPG\NPC;
 
-
 use Adelf\CoolRPG\Personate\Common;
 use Adelf\CoolRPG\Stats\NPC\Stats;
 

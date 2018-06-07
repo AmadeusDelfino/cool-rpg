@@ -2,7 +2,6 @@
 
 namespace Adelf\CoolRPG\Tests;
 
-
 use Adelf\CoolRPG\Generator\Player\Generate;
 use Adelf\CoolRPG\Items\Catalog\Commons\Rock;
 use Adelf\CoolRPG\Items\Catalog\Swords\LongSword;
@@ -21,7 +20,7 @@ class AttackActionTest extends TestCase
         return [
             [$player, new Rock()],
             [$player, new ShortSword()],
-            [$player, new LongSword()]
+            [$player, new LongSword()],
         ];
     }
 

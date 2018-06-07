@@ -2,7 +2,6 @@
 
 namespace Adelf\CoolRPG\Personate\Actions;
 
-
 use Adelf\CoolRPG\Dices\D20;
 use Adelf\CoolRPG\Interfaces\Weapon;
 

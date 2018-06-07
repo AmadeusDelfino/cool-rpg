@@ -2,7 +2,6 @@
 
 namespace Adelf\CoolRPG\Items\Catalog;
 
-
 use Adelf\CoolRPG\Interfaces\Shield;
 use Adelf\CoolRPG\Interfaces\Weapon;
 
@@ -20,6 +19,7 @@ abstract class ShieldBase extends WeaponBase implements Weapon, Shield
 
     /**
      * @param int $defenseModify
+     *
      * @return ShieldBase
      */
     public function setDefenseModify(int $defenseModify)

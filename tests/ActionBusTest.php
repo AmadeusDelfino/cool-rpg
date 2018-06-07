@@ -2,7 +2,6 @@
 
 namespace Adelf\CoolRPG\Tests;
 
-
 use Adelf\CoolRPG\Exceptions\ActionDontExistsException;
 use Adelf\CoolRPG\Items\Catalog\Commons\Rock;
 use Adelf\CoolRPG\Items\Catalog\Swords\Dagger;
@@ -41,8 +40,9 @@ class ActionBusTest extends TestCase
     }
 
     /**
-     * @param ActionBus $bus
+     * @param ActionBus  $bus
      * @param WeaponBase $weapon
+     *
      * @throws \Adelf\CoolRPG\Exceptions\ActionDontExistsException
      * @dataProvider action_bus_for_attack_provider
      */
@@ -57,8 +57,9 @@ class ActionBusTest extends TestCase
     }
 
     /**
-     * @param ActionBus $bus
+     * @param ActionBus  $bus
      * @param WeaponBase $weapon
+     *
      * @throws \Adelf\CoolRPG\Exceptions\ActionDontExistsException
      * @dataProvider action_bus_for_attack_provider
      */
@@ -69,7 +70,7 @@ class ActionBusTest extends TestCase
     }
 
     /**
-     * @param Base $action
+     * @param Base       $action
      * @param WeaponBase $weapon
      * @dataProvider action_class_with_item_provider
      */

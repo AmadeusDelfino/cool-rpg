@@ -2,7 +2,6 @@
 
 namespace Adelf\CoolRPG\Support\Handlers;
 
-
 class FormatFloatNumbers
 {
     public function __invoke($number)

@@ -2,7 +2,6 @@
 
 namespace Adelf\CoolRPG\Personate\Equips;
 
-
 use Adelf\CoolRPG\Exceptions\CantUseShieldException;
 use Adelf\CoolRPG\Exceptions\CantUseTwoHandedWeaponException;
 use Adelf\CoolRPG\Interfaces\Weapon;
@@ -22,16 +21,16 @@ class EquipsControl
     protected $pants;
     protected $shoes;
 
-
-
     /**
      * @param Weapon $weapon
-     * @return EquipsControl
+     *
      * @throws CantUseTwoHandedWeaponException
+     *
+     * @return EquipsControl
      */
     public function useWeapon(Weapon $weapon)
     {
-        if(!(new CanUseTwoHeadedWeapon())($weapon, $this->shield)) {
+        if (!(new CanUseTwoHeadedWeapon())($weapon, $this->shield)) {
             throw new CantUseTwoHandedWeaponException();
         }
 
@@ -42,12 +41,14 @@ class EquipsControl
 
     /**
      * @param ShieldBase $shield
-     * @return EquipsControl
+     *
      * @throws CantUseShieldException
+     *
+     * @return EquipsControl
      */
     public function useShield(ShieldBase $shield)
     {
-        if(! (new CanUseShield())($shield, $this->weapon)) {
+        if (!(new CanUseShield())($shield, $this->weapon)) {
             throw new CantUseShieldException();
         }
 

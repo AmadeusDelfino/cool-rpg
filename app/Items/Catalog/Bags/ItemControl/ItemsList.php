@@ -2,7 +2,6 @@
 
 namespace Adelf\CoolRPG\Items\Catalog\Bags\ItemControl;
 
-
 use Adelf\CoolRPG\Interfaces\Item;
 
 class ItemsList

@@ -5,6 +5,7 @@ namespace Adelf\CoolRPG\Personate\Equips;
 use Adelf\CoolRPG\Exceptions\CantUseShieldException;
 use Adelf\CoolRPG\Exceptions\CantUseTwoHandedWeaponException;
 use Adelf\CoolRPG\Interfaces\Weapon;
+use Adelf\CoolRPG\Items\Catalog\Commons\Hands;
 use Adelf\CoolRPG\Items\Catalog\ShieldBase;
 use Adelf\CoolRPG\Items\Catalog\WeaponBase;
 use Adelf\CoolRPG\Personate\Equips\Validators\CanUseShield;
@@ -62,7 +63,7 @@ class EquipsControl
      */
     public function getWeapon(): ?WeaponBase
     {
-        return $this->weapon;
+        return $this->weapon ?? new Hands();
     }
 
     /**

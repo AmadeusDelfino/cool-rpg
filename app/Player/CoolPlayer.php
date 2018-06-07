@@ -2,7 +2,6 @@
 
 namespace Adelf\CoolRPG\Player;
 
-
 use Adelf\CoolRPG\Interfaces\Bag;
 use Adelf\CoolRPG\Personate\Common;
 use Adelf\CoolRPG\Personate\Equips\EquipsControl;
@@ -18,6 +17,7 @@ class CoolPlayer extends Common
 
     /**
      * CoolPlayer constructor.
+     *
      * @throws \Exception
      */
     protected function warmupPersona() : void
@@ -32,7 +32,7 @@ class CoolPlayer extends Common
 
     public function getDefenseValue() : int
     {
-        $defenseModify  = is_null($this->equips->getShield()) ? 0 : $this->equips->getShield()->getDefenseModify();
+        $defenseModify = is_null($this->equips->getShield()) ? 0 : $this->equips->getShield()->getDefenseModify();
 
         return $this->stats->getDefenseValue($defenseModify);
     }
@@ -46,7 +46,7 @@ class CoolPlayer extends Common
 
     public function levelUp($levels = 1)
     {
-        for(;$levels > 0;$levels--){
+        for (; $levels > 0; $levels--) {
             $this->stats->addLevel();
         }
     }

@@ -2,7 +2,6 @@
 
 namespace Adelf\CoolRPG\Tests;
 
-
 use Adelf\CoolRPG\Generator\NPC\Generate;
 use Adelf\CoolRPG\NPC\CoolNPC;
 use PHPUnit\Framework\TestCase;

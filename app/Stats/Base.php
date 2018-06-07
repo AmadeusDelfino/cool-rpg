@@ -119,7 +119,6 @@ abstract class Base
             ->changeMaxLife(
                 $this->life->getMaxLife() + (new CalculateLifeValue())($this->level->getLevel(), $this->getConstitution())
             );
-
     }
 
     public function life()

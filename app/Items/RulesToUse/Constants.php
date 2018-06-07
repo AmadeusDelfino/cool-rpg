@@ -2,24 +2,23 @@
 
 namespace Adelf\CoolRPG\Items\RulesToUse;
 
-
 class Constants
 {
-    CONST BIGGER = '>';
-    CONST BIGGER_OR_EQUAL = '>=';
+    const BIGGER = '>';
+    const BIGGER_OR_EQUAL = '>=';
 
-    CONST LESS = '<';
-    CONST LESS_OR_EQUAL = '=<';
+    const LESS = '<';
+    const LESS_OR_EQUAL = '=<';
 
     /**
-     * Stat names
+     * Stat names.
      */
-    CONST LEVEL = 'level';
-    CONST STRENGTH = 'strength';
-    CONST DEXTERITY = 'dexterity';
-    CONST CHARISMA = 'charisma';
-    CONST FAITH = 'faith';
-    CONST WISDOM = 'wisdom';
-    CONST INTELLIGENCE = 'intelligence';
-    CONST CONSTITUTION = 'constitution';
+    const LEVEL = 'level';
+    const STRENGTH = 'strength';
+    const DEXTERITY = 'dexterity';
+    const CHARISMA = 'charisma';
+    const FAITH = 'faith';
+    const WISDOM = 'wisdom';
+    const INTELLIGENCE = 'intelligence';
+    const CONSTITUTION = 'constitution';
 }

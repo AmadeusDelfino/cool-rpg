@@ -2,7 +2,6 @@
 
 namespace Adelf\CoolRPG\Items\Catalog;
 
-
 use Adelf\CoolRPG\Interfaces\Item;
 use Adelf\CoolRPG\Items\RulesToUse\Constants;
 use Adelf\CoolRPG\Items\RulesToUse\ItemRules;
@@ -10,10 +9,10 @@ use Adelf\CoolRPG\Items\RulesToUse\Validator;
 
 abstract class Base implements Item
 {
-    CONST SMALL_SIZE = 'small';
-    CONST MEDIUM_SIZE = 'medium';
-    CONST LARGE_SIZE = 'large';
-    CONST VERY_LARGE_SIZE = 'very_large';
+    const SMALL_SIZE = 'small';
+    const MEDIUM_SIZE = 'medium';
+    const LARGE_SIZE = 'large';
+    const VERY_LARGE_SIZE = 'very_large';
 
     protected $name;
     protected $description;
@@ -38,7 +37,7 @@ abstract class Base implements Item
                     ],
                     'life' => [
                         Constants::BIGGER_OR_EQUAL => '1',
-                    ]
+                    ],
                 ]);
     }
 
@@ -49,7 +48,9 @@ abstract class Base implements Item
 
     abstract public function effects() : array;
 
-    protected function configureCustomRules(){}
+    protected function configureCustomRules()
+    {
+    }
 
     public function makeItemMagic()
     {

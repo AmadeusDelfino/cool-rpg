@@ -2,7 +2,6 @@
 
 namespace Adelf\CoolRPG\Personate\Level;
 
-
 class LevelControl
 {
     protected $level = 1;
@@ -58,6 +57,4 @@ class LevelControl
     {
         return $this->level;
     }
-
-
 }

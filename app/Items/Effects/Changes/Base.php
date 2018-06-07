@@ -2,7 +2,6 @@
 
 namespace Adelf\CoolRPG\Items\Effects\Changes;
 
-
 abstract class Base
 {
     protected $value = 0;

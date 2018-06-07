@@ -2,7 +2,6 @@
 
 namespace Adelf\CoolRPG\Personate\ActionsResults;
 
-
 class AttackResult
 {
     protected $hit = 0;
@@ -19,6 +18,7 @@ class AttackResult
 
     /**
      * @param int $damage
+     *
      * @return AttackResult
      */
     public function setDamage(int $damage)
@@ -38,6 +38,7 @@ class AttackResult
 
     /**
      * @param string $damageType
+     *
      * @return AttackResult
      */
     public function setDamageType(string $damageType)
@@ -57,6 +58,7 @@ class AttackResult
 
     /**
      * @param int $hit
+     *
      * @return AttackResult
      */
     public function setHit(int $hit)

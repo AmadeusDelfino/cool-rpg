@@ -2,7 +2,6 @@
 
 namespace Adelf\CoolRPG\Items\Catalog\Shields;
 
-
 use Adelf\CoolRPG\Dices\D4;
 use Adelf\CoolRPG\Interfaces\Dice;
 

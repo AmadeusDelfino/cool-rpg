@@ -2,7 +2,6 @@
 
 namespace Adelf\CoolRPG\Tests;
 
-
 use Adelf\CoolRPG\Personate\Life\LifeControl;
 use PHPUnit\Framework\TestCase;
 
@@ -54,6 +53,7 @@ class LifeTest extends TestCase
                 random_int(1, 10),
             ],
         ];
+
         return [
             [(new LifeControl())->makeHistoryByLevel($levelAndLife[0][0], $levelAndLife[0][1]), $levelAndLife[0][0], $levelAndLife[0][1]],
             [(new LifeControl())->makeHistoryByLevel($levelAndLife[1][0], $levelAndLife[1][1]), $levelAndLife[1][0], $levelAndLife[1][1]],
@@ -92,7 +92,7 @@ class LifeTest extends TestCase
         $removedLife = random_int(1, 100);
         $lifeControl->removeCurrentLife($removedLife);
 
-        $this->assertEquals($currentLife-$removedLife, $lifeControl->getCurrentLife());
+        $this->assertEquals($currentLife - $removedLife, $lifeControl->getCurrentLife());
     }
 
     /**

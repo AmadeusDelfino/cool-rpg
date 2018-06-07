@@ -2,7 +2,6 @@
 
 namespace Adelf\CoolRPG\Dices;
 
-
 use Adelf\CoolRPG\Interfaces\Dice;
 
 class Base implements Dice

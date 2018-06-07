@@ -2,7 +2,6 @@
 
 namespace Adelf\CoolRPG\Personate\Life;
 
-
 use Adelf\CoolRPG\Support\Handlers\CalculateLifeValue;
 use Adelf\CoolRPG\Support\Handlers\FormatFloatNumbers;
 

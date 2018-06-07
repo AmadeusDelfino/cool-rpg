@@ -2,7 +2,6 @@
 
 namespace Adelf\CoolRPG\Tests;
 
-
 use Adelf\CoolRPG\Exceptions\CantUseShieldException;
 use Adelf\CoolRPG\Exceptions\CantUseTwoHandedWeaponException;
 use Adelf\CoolRPG\Items\Catalog\Commons\Rock;
@@ -56,7 +55,7 @@ class EquipControlTest extends TestCase
 
     /**
      * @param EquipsControl $control
-     * @param WeaponBase $weaponBase
+     * @param WeaponBase    $weaponBase
      * @dataProvider equip_control_with_one_handed_weapon_data_provider
      */
     public function test_if_use_weapon_works(EquipsControl $control, WeaponBase $weaponBase)
@@ -68,7 +67,8 @@ class EquipControlTest extends TestCase
 
     /**
      * @param EquipsControl $control
-     * @param WeaponBase $weaponBase
+     * @param WeaponBase    $weaponBase
+     *
      * @throws \Adelf\CoolRPG\Exceptions\CantUseShieldException
      * @throws \Adelf\CoolRPG\Exceptions\CantUseTwoHandedWeaponException
      * @dataProvider equip_control_with_two_handed_weapon_with_shield_data_provider
@@ -84,8 +84,9 @@ class EquipControlTest extends TestCase
 
     /**
      * @param EquipsControl $control
-     * @param WeaponBase $weaponBase
+     * @param WeaponBase    $weaponBase
      * @param $shield
+     *
      * @throws CantUseShieldException
      * @throws CantUseTwoHandedWeaponException
      * @dataProvider equip_control_with_two_handed_weapon_with_shield_data_provider
@@ -101,8 +102,9 @@ class EquipControlTest extends TestCase
 
     /**
      * @param EquipsControl $control
-     * @param WeaponBase $weaponBase
+     * @param WeaponBase    $weaponBase
      * @param $shield
+     *
      * @throws CantUseShieldException
      * @throws CantUseTwoHandedWeaponException
      * @dataProvider equip_control_large_shield_with_small_weapon_data_provider
@@ -117,8 +119,9 @@ class EquipControlTest extends TestCase
 
     /**
      * @param EquipsControl $control
-     * @param WeaponBase $weaponBase
+     * @param WeaponBase    $weaponBase
      * @param $shield
+     *
      * @throws CantUseShieldException
      * @throws CantUseTwoHandedWeaponException
      * @dataProvider equip_control_large_shield_with_not_small_weapon_data_provider

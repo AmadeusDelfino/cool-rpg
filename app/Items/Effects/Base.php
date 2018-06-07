@@ -2,7 +2,6 @@
 
 namespace Adelf\CoolRPG\Items\Effects;
 
-
 use Adelf\CoolRPG\Interfaces\EffectItem;
 use Adelf\CoolRPG\Items\Effects\Changes\DefenseChange;
 use Adelf\CoolRPG\Items\Effects\Changes\ExperienceChange;

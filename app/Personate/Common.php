@@ -2,7 +2,6 @@
 
 namespace Adelf\CoolRPG\Personate;
 
-
 use Adelf\CoolRPG\Exceptions\ActionDontExistsException;
 use Adelf\CoolRPG\Traits\InstanceOfClass;
 
@@ -22,8 +21,10 @@ abstract class Common
     /**
      * @param $action
      * @param array|null $args
-     * @return mixed
+     *
      * @throws ActionDontExistsException
+     *
+     * @return mixed
      */
     public function doAction($action, ?array $args)
     {

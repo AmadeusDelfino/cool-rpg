@@ -2,7 +2,6 @@
 
 namespace Adelf\CoolRPG\Personate;
 
-
 use Adelf\CoolRPG\Exceptions\ActionDontExistsException;
 use Adelf\CoolRPG\Personate\ActionHandlers\AttackHandler;
 use Adelf\CoolRPG\Traits\InstanceOfClass;
@@ -17,12 +16,13 @@ class ActionBus
         self::ATTACK_ACTION => AttackHandler::class,
     ];
 
-
     /**
      * @param $action
      * @param array|null $args
-     * @return mixed
+     *
      * @throws ActionDontExistsException
+     *
+     * @return mixed
      */
     public function __invoke($action, ?array $args)
     {
@@ -33,11 +33,12 @@ class ActionBus
 
     /**
      * @param $action
+     *
      * @throws ActionDontExistsException
      */
     private function validateIfActionExists($action)
     {
-        if(!isset($this->availableActions[$action])) {
+        if (!isset($this->availableActions[$action])) {
             throw new ActionDontExistsException();
         }
     }

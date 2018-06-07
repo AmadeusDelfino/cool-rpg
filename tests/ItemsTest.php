@@ -2,16 +2,11 @@
 
 namespace Adelf\CoolRPG\Tests;
 
-
-use Adelf\CoolRPG\Generator\Player\Generate;
 use Adelf\CoolRPG\Interfaces\Item;
 use Adelf\CoolRPG\Items\Catalog\Commons\Rock;
 use Adelf\CoolRPG\Items\Catalog\Potions\DeathPotion;
 use Adelf\CoolRPG\Items\Catalog\Swords\LongSword;
 use Adelf\CoolRPG\Items\Catalog\Swords\ShortSword;
-use Adelf\CoolRPG\Player\CoolPlayer;
-use Adelf\CoolRPG\Player\Equips\EquipsControl;
-use Adelf\CoolRPG\Support\Handlers\CalculateLifeValue;
 use PHPUnit\Framework\TestCase;
 
 class ItemsTest extends TestCase
@@ -45,9 +40,8 @@ class ItemsTest extends TestCase
     {
         $this->assertEquals(true, $item->canUse([
             'player' => [
-                'level' => 1
+                'level' => 1,
             ],
         ]));
     }
-
 }

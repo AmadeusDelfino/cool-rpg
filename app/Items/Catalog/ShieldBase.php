@@ -28,9 +28,4 @@ abstract class ShieldBase extends WeaponBase implements Weapon, Shield
 
         return $this;
     }
-
-    public function size(): string
-    {
-        return self::MEDIUM_SIZE;
-    }
 }

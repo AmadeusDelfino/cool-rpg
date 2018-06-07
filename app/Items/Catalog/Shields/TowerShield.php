@@ -8,6 +8,8 @@ use Adelf\CoolRPG\Interfaces\Dice;
 
 class TowerShield extends Base
 {
+    protected $defenseModify = 6;
+
     public function damageDice(): Dice
     {
         return new D6();

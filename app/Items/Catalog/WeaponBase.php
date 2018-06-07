@@ -12,11 +12,6 @@ abstract class WeaponBase extends Base implements Weapon
     CONST CONTUSION_DAMAGE = 'contusion_damage';
     CONST PIERCING_DAMAGE = 'piercing_damage';
 
-    CONST SMALL_SIZE = 'small';
-    CONST MEDIUM_SIZE = 'medium';
-    CONST LARGE_SIZE = 'large';
-    CONST VERY_LARGE_SIZE = 'very_large';
-
     protected $hitModify = 0;
     protected $damageModify = 0;
 

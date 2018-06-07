@@ -8,6 +8,8 @@ use Adelf\CoolRPG\Interfaces\Dice;
 
 class LargeShield extends Base
 {
+    protected $defenseModify = 4;
+
     public function damageDice(): Dice
     {
         return new D4();

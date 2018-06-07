@@ -1,6 +1,6 @@
 <?php
 
-namespace Adelf\CoolRPG\Player\Equips;
+namespace Adelf\CoolRPG\Personate\Equips;
 
 
 use Adelf\CoolRPG\Exceptions\CantUseShieldException;

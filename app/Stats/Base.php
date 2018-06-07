@@ -3,8 +3,8 @@
 namespace Adelf\CoolRPG\Stats;
 
 use Adelf\Config\Config;
-use Adelf\CoolRPG\Player\Level\LevelControl;
-use Adelf\CoolRPG\Player\Life\LifeControl;
+use Adelf\CoolRPG\Personate\Level\LevelControl;
+use Adelf\CoolRPG\Personate\Life\LifeControl;
 use Adelf\CoolRPG\Support\Handlers\CalculateDefenseValueValue;
 use Adelf\CoolRPG\Support\Handlers\CalculateLifeValue;
 

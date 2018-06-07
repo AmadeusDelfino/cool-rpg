@@ -1,6 +1,6 @@
 <?php
 
-namespace Adelf\CoolRPG\Player\Life;
+namespace Adelf\CoolRPG\Personate\Life;
 
 
 use Adelf\CoolRPG\Support\Handlers\CalculateLifeValue;

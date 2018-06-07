@@ -14,7 +14,7 @@ use Adelf\CoolRPG\Items\Catalog\Swords\GreaterSword;
 use Adelf\CoolRPG\Items\Catalog\Swords\LongSword;
 use Adelf\CoolRPG\Items\Catalog\Swords\ShortSword;
 use Adelf\CoolRPG\Items\Catalog\WeaponBase;
-use Adelf\CoolRPG\Player\Equips\EquipsControl;
+use Adelf\CoolRPG\Personate\Equips\EquipsControl;
 use PHPUnit\Framework\TestCase;
 
 class EquipControlTest extends TestCase

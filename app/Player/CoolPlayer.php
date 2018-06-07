@@ -5,7 +5,7 @@ namespace Adelf\CoolRPG\Player;
 
 use Adelf\CoolRPG\Interfaces\Bag;
 use Adelf\CoolRPG\Personate\Common;
-use Adelf\CoolRPG\Player\Equips\EquipsControl;
+use Adelf\CoolRPG\Personate\Equips\EquipsControl;
 use Adelf\CoolRPG\Stats\Player\Stats;
 
 class CoolPlayer extends Common

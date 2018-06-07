@@ -4,8 +4,8 @@ namespace Adelf\CoolRPG\Tests;
 
 
 use Adelf\CoolRPG\Generator\Player\Generate;
+use Adelf\CoolRPG\Personate\Equips\EquipsControl;
 use Adelf\CoolRPG\Player\CoolPlayer;
-use Adelf\CoolRPG\Player\Equips\EquipsControl;
 use Adelf\CoolRPG\Support\Handlers\CalculateLifeValue;
 use PHPUnit\Framework\TestCase;
 

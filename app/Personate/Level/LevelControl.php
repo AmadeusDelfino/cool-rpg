@@ -1,6 +1,6 @@
 <?php
 
-namespace Adelf\CoolRPG\Player\Level;
+namespace Adelf\CoolRPG\Personate\Level;
 
 
 class LevelControl

@@ -11,8 +11,10 @@ class ActionBus
 {
     use InstanceOfClass;
 
-    private static $availableActions = [
-        'attack' => AttackHandler::class,
+    const ATTACK_ACTION = 'attack';
+
+    private $availableActions = [
+        self::ATTACK_ACTION => AttackHandler::class,
     ];
 
 
@@ -26,7 +28,7 @@ class ActionBus
     {
         $this->validateIfActionExists($action);
 
-        return ($this->getInstanceOfClass(self::$availableActions[$action]))($args);
+        return ($this->getInstanceOfClass($this->availableActions[$action]))($args);
     }
 
     /**
@@ -35,7 +37,7 @@ class ActionBus
      */
     private function validateIfActionExists($action)
     {
-        if(!isset(self::$availableActions[$action])) {
+        if(!isset($this->availableActions[$action])) {
             throw new ActionDontExistsException();
         }
     }

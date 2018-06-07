@@ -29,7 +29,7 @@ class LifeControl
      */
     public function getCurrentLife(): float
     {
-        return $this->currentLife;
+        return (new FormatFloatNumbers())($this->currentLife);
     }
 
     /**

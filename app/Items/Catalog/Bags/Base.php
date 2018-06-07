@@ -65,7 +65,7 @@ abstract class Base extends ItemBase implements Bag
             ->items();
     }
 
-    public function effect() : array
+    public function effects() : array
     {
         return [new PlayerEffect()];
     }

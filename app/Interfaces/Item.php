@@ -7,7 +7,7 @@ interface Item
 {
     public function canUse($data) : bool;
 
-    public function effect() : array;
+    public function effects() : array;
 
     public function makeItemMagic();
 

@@ -47,7 +47,7 @@ abstract class Base implements Item
         return Validator::canUse($data, $this->rulesToUse);
     }
 
-    abstract public function effect() : array;
+    abstract public function effects() : array;
 
     protected function configureCustomRules(){}
 

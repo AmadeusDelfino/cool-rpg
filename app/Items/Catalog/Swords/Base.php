@@ -12,7 +12,7 @@ abstract class Base extends WeaponBase
         return $this::SLASHING_DAMAGE;
     }
 
-    public function effect(): array
+    public function effects(): array
     {
         $effect = new EnemyEffect();
         $effect

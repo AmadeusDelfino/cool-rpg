@@ -21,4 +21,6 @@ interface Weapon
     public function setTwoHanded(bool $twoHanded);
 
     public function size(): string;
+
+    public function isFinesse() : bool;
 }

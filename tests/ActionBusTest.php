@@ -13,6 +13,7 @@ use Adelf\CoolRPG\Personate\ActionBus;
 use Adelf\CoolRPG\Personate\Actions\AttackAction;
 use Adelf\CoolRPG\Personate\Actions\Base;
 use Adelf\CoolRPG\Personate\ActionsResults\AttackResult;
+use Adelf\CoolRPG\Stats\Player\Stats;
 use PHPUnit\Framework\TestCase;
 
 class ActionBusTest extends TestCase
@@ -49,7 +50,7 @@ class ActionBusTest extends TestCase
     public function test_if_attack_action_works(ActionBus $bus, WeaponBase $weapon)
     {
         /** @var AttackResult $result */
-        $result = $bus('attack', ['item'=> $weapon]);
+        $result = $bus('attack', ['item'=> $weapon, 'persona_stats' => new Stats()]);
 
         $this->assertEquals($weapon->damageType(), $result->getDamageType());
         $this->assertNotEquals(0, $result->getHit());

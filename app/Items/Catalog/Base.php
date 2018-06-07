@@ -19,6 +19,15 @@ abstract class Base implements Item
     protected $isMagic = false;
     protected $rulesToUse;
 
+    protected $strengthNeeded = 0;
+    protected $dexterityNeeded = 0;
+    protected $charismaNeeded = 0;
+    protected $faithNeeded = 0;
+    protected $wisdomNeeded = 0;
+    protected $intelligenceNeeded = 0;
+    protected $constitutionNeeded = 0;
+    protected $levelNeeded = 0;
+
     public function __construct()
     {
         $this->rulesToUse = new ItemRules();
@@ -32,11 +41,29 @@ abstract class Base implements Item
             ->rulesToUse
             ->addPlayerRules(
                 [
-                    'level' => [
-                        Constants::BIGGER_OR_EQUAL => '1',
+                    Constants::LEVEL => [
+                        Constants::BIGGER_OR_EQUAL => $this->levelNeeded,
                     ],
-                    'life' => [
-                        Constants::BIGGER_OR_EQUAL => '1',
+                    Constants::STRENGTH => [
+                        Constants::BIGGER_OR_EQUAL => $this->strengthNeeded,
+                    ],
+                    Constants::DEXTERITY => [
+                        Constants::BIGGER_OR_EQUAL => $this->dexterityNeeded,
+                    ],
+                    Constants::CHARISMA => [
+                        Constants::BIGGER_OR_EQUAL => $this->charismaNeeded,
+                    ],
+                    Constants::FAITH => [
+                        Constants::BIGGER_OR_EQUAL => $this->faithNeeded,
+                    ],
+                    Constants::WISDOM => [
+                        Constants::BIGGER_OR_EQUAL => $this->wisdomNeeded,
+                    ],
+                    Constants::INTELLIGENCE => [
+                        Constants::BIGGER_OR_EQUAL => $this->intelligenceNeeded,
+                    ],
+                    Constants::CONSTITUTION => [
+                        Constants::BIGGER_OR_EQUAL => $this->constitutionNeeded,
                     ],
                 ]);
     }

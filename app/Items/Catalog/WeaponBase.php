@@ -15,6 +15,7 @@ abstract class WeaponBase extends Base implements Weapon
     protected $damageModify = 0;
 
     protected $twoHanded = false;
+    protected $finesse = false;
 
     abstract public function damageDice(): Dice;
 
@@ -80,5 +81,10 @@ abstract class WeaponBase extends Base implements Weapon
         $this->twoHanded = $twoHanded;
 
         return $this;
+    }
+
+    public function isFinesse() : bool
+    {
+        return $this->finesse;
     }
 }

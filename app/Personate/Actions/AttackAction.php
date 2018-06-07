@@ -9,6 +9,8 @@ class AttackAction extends Base
 {
     protected $name = 'Ataque';
     protected $description = 'Ação de atacar algo';
+    protected $hitModify = 0;
+    protected $damageModify = 0;
 
     public function getItem() : Weapon
     {
@@ -19,7 +21,7 @@ class AttackAction extends Base
     {
         return (new D20())
             ->rollWithModify(
-                $this->getItem()->getHitModify()
+                $this->getItem()->getHitModify() + $this->hitModify
             );
     }
 
@@ -29,7 +31,29 @@ class AttackAction extends Base
             ->getItem()
             ->damageDice()
             ->rollWithModify(
-                $this->getItem()->getDamageModify()
+                $this->getItem()->getDamageModify() + $this->damageModify
             );
+    }
+
+    /**
+     * @param int $hitModify
+     * @return AttackAction
+     */
+    public function setHitModify(int $hitModify)
+    {
+        $this->hitModify = $hitModify;
+
+        return $this;
+    }
+
+    /**
+     * @param int $damageModify
+     * @return AttackAction
+     */
+    public function setDamageModify(int $damageModify)
+    {
+        $this->damageModify = $damageModify;
+
+        return $this;
     }
 }

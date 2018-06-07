@@ -3,8 +3,8 @@
 namespace Adelf\CoolRPG\Personate\EffectApply;
 
 
-use Adelf\CoolRPG\Items\Effects\Base;
-use Adelf\CoolRPG\Items\Effects\Changes\LifeChange;
+use Adelf\CoolRPG\Effects\Base;
+use Adelf\CoolRPG\Effects\Changes\LifeChange;
 use Adelf\CoolRPG\Personate\Persona;
 
 class Handler

@@ -1,6 +1,6 @@
 <?php
 
-namespace Adelf\CoolRPG\Items\Effects;
+namespace Adelf\CoolRPG\Effects;
 
 class PlaceEffect extends Base
 {

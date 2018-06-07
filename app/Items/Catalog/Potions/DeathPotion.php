@@ -2,7 +2,7 @@
 
 namespace Adelf\CoolRPG\Items\Catalog\Potions;
 
-use Adelf\CoolRPG\Items\Effects\PlayerEffect;
+use Adelf\CoolRPG\Effects\PlayerEffect;
 
 class DeathPotion extends Base
 {

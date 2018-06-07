@@ -1,12 +1,12 @@
 <?php
 
-namespace Adelf\CoolRPG\Items\Effects;
+namespace Adelf\CoolRPG\Effects;
 
 use Adelf\CoolRPG\Interfaces\EffectItem;
-use Adelf\CoolRPG\Items\Effects\Changes\DefenseChange;
-use Adelf\CoolRPG\Items\Effects\Changes\ExperienceChange;
-use Adelf\CoolRPG\Items\Effects\Changes\LevelChange;
-use Adelf\CoolRPG\Items\Effects\Changes\LifeChange;
+use Adelf\CoolRPG\Effects\Changes\DefenseChange;
+use Adelf\CoolRPG\Effects\Changes\ExperienceChange;
+use Adelf\CoolRPG\Effects\Changes\LevelChange;
+use Adelf\CoolRPG\Effects\Changes\LifeChange;
 
 abstract class Base implements EffectItem
 {

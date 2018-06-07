@@ -3,7 +3,7 @@
 namespace Adelf\CoolRPG\Personate;
 
 use Adelf\CoolRPG\Exceptions\ActionDontExistsException;
-use Adelf\CoolRPG\Items\Effects\Base as Effect;
+use Adelf\CoolRPG\Effects\Base as Effect;
 use Adelf\CoolRPG\Personate\EffectApply\Handler;
 use Adelf\CoolRPG\Stats\Base;
 use Adelf\CoolRPG\Traits\InstanceOfClass;

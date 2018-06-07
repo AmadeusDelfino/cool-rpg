@@ -3,7 +3,7 @@
 namespace Adelf\CoolRPG\Items\Catalog\Commons;
 
 use Adelf\CoolRPG\Items\Catalog\WeaponBase;
-use Adelf\CoolRPG\Items\Effects\EnemyEffect;
+use Adelf\CoolRPG\Effects\EnemyEffect;
 
 abstract class Base extends WeaponBase
 {

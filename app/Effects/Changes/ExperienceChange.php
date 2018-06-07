@@ -1,6 +1,6 @@
 <?php
 
-namespace Adelf\CoolRPG\Items\Effects\Changes;
+namespace Adelf\CoolRPG\Effects\Changes;
 
 class ExperienceChange extends Base
 {

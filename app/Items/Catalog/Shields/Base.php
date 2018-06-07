@@ -3,7 +3,7 @@
 namespace Adelf\CoolRPG\Items\Catalog\Shields;
 
 use Adelf\CoolRPG\Items\Catalog\ShieldBase;
-use Adelf\CoolRPG\Items\Effects\EnemyEffect;
+use Adelf\CoolRPG\Effects\EnemyEffect;
 
 abstract class Base extends ShieldBase
 {

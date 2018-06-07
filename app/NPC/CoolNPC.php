@@ -2,10 +2,10 @@
 
 namespace Adelf\CoolRPG\NPC;
 
-use Adelf\CoolRPG\Personate\Common;
+use Adelf\CoolRPG\Personate\Persona;
 use Adelf\CoolRPG\Stats\NPC\Stats;
 
-class CoolNPC extends Common
+class CoolNPC extends Persona
 {
     protected $stats;
 

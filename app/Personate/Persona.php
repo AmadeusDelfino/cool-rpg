@@ -3,9 +3,12 @@
 namespace Adelf\CoolRPG\Personate;
 
 use Adelf\CoolRPG\Exceptions\ActionDontExistsException;
+use Adelf\CoolRPG\Items\Effects\Base as Effect;
+use Adelf\CoolRPG\Personate\EffectApply\Handler;
+use Adelf\CoolRPG\Stats\Base;
 use Adelf\CoolRPG\Traits\InstanceOfClass;
 
-abstract class Common
+abstract class Persona
 {
     use InstanceOfClass;
 
@@ -16,18 +19,28 @@ abstract class Common
         $this->warmupPersona();
     }
 
+    public function stats() : Base
+    {
+        return $this->stats;
+    }
+
     abstract protected function warmupPersona(): void;
 
     /**
      * @param $action
      * @param array|null $args
      *
-     * @throws ActionDontExistsException
-     *
      * @return mixed
      */
     public function doAction($action, ?array $args)
     {
         return (new ActionBus())($action, $args);
+    }
+
+    public function applyEffects(Effect $effect)
+    {
+        (new Handler())($this, $effect);
+
+        return $this;
     }
 }

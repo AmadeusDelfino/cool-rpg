@@ -3,11 +3,11 @@
 namespace Adelf\CoolRPG\Player;
 
 use Adelf\CoolRPG\Interfaces\Bag;
-use Adelf\CoolRPG\Personate\Common;
+use Adelf\CoolRPG\Personate\Persona;
 use Adelf\CoolRPG\Personate\Equips\EquipsControl;
 use Adelf\CoolRPG\Stats\Player\Stats;
 
-class CoolPlayer extends Common
+class CoolPlayer extends Persona
 {
     /** @var Stats */
     protected $stats;
@@ -57,11 +57,6 @@ class CoolPlayer extends Common
     public function bag() : Bag
     {
         return $this->bag;
-    }
-
-    public function stats() : Stats
-    {
-        return $this->stats;
     }
 
     public function equips() : EquipsControl

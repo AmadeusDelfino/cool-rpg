@@ -19,4 +19,9 @@ abstract class Base
 
         return $this;
     }
+
+    public function value()
+    {
+        return $this->value;
+    }
 }

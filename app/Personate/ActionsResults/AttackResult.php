@@ -2,31 +2,13 @@
 
 namespace Adelf\CoolRPG\Personate\ActionsResults;
 
+use Adelf\CoolRPG\Effects\Base;
+
 class AttackResult
 {
     protected $hit = 0;
-    protected $damage = 0;
     protected $damageType = '';
-
-    /**
-     * @return int
-     */
-    public function getDamage(): int
-    {
-        return $this->damage;
-    }
-
-    /**
-     * @param int $damage
-     *
-     * @return AttackResult
-     */
-    public function setDamage(int $damage)
-    {
-        $this->damage = $damage;
-
-        return $this;
-    }
+    protected $effects;
 
     /**
      * @return string
@@ -64,6 +46,13 @@ class AttackResult
     public function setHit(int $hit)
     {
         $this->hit = $hit;
+
+        return $this;
+    }
+
+    public function setEffects(array $effects)
+    {
+        $this->effects = $effects;
 
         return $this;
     }

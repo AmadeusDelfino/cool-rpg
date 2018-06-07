@@ -2,6 +2,7 @@
 
 namespace Adelf\CoolRPG\Personate\ActionHandlers;
 
+use Adelf\CoolRPG\Effects\PlayerEffect;
 use Adelf\CoolRPG\Personate\Actions\AttackAction;
 use Adelf\CoolRPG\Personate\ActionsResults\AttackResult;
 use Adelf\CoolRPG\Stats\Base;
@@ -27,14 +28,16 @@ class AttackHandler
      */
     private function buildResult(AttackResult $result, AttackAction $action): AttackResult
     {
+        $playerEffect = new PlayerEffect();
+        $playerEffect->lifeChange->decrease($action->damageRoll());
         $result
             ->setHit($action->hitRoll())
-            ->setDamage($action->damageRoll())
             ->setDamageType($action->getItem()->damageType());
 
         if($result->getHit() === 20) {
-            $result->setDamage($result->getDamage()*2);
+            $playerEffect->lifeChange->decrease($playerEffect->lifeChange->value());
         }
+        $result->setEffects([$playerEffect]);
 
         return $result;
     }
@@ -43,15 +46,15 @@ class AttackHandler
     {
         if($action->getItem()->isFinesse()) {
             $action
-                ->setHitModify($stats->getDexterity())
-                ->setDamageModify($stats->getDexterity());
+                ->setHitModify($stats->getDexterity()/2)
+                ->setDamageModify($stats->getDexterity()/2);
 
             return $action;
         }
 
         $action
-            ->setHitModify($stats->getStrength())
-            ->setDamageModify($stats->getStrength());
+            ->setHitModify($stats->getStrength()/2)
+            ->setDamageModify($stats->getStrength()/2);
 
         return $action;
     }

@@ -2,13 +2,12 @@
 
 namespace Adelf\CoolRPG\Personate\ActionsResults;
 
-use Adelf\CoolRPG\Effects\Base;
 
 class AttackResult
 {
     protected $hit = 0;
     protected $damageType = '';
-    protected $effects;
+    protected $effects = [];
 
     /**
      * @return string
@@ -55,5 +54,10 @@ class AttackResult
         $this->effects = $effects;
 
         return $this;
+    }
+
+    public function getEffects() : array
+    {
+        return $this->effects;
     }
 }

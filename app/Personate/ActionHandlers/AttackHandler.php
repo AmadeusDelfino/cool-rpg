@@ -34,9 +34,7 @@ class AttackHandler
             ->setHit($action->hitRoll())
             ->setDamageType($action->getItem()->damageType());
 
-        if($result->getHit() === 20) {
-            $playerEffect->lifeChange->decrease($playerEffect->lifeChange->value());
-        }
+
         $result->setEffects([$playerEffect]);
 
         return $result;

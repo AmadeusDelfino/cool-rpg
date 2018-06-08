@@ -9,11 +9,7 @@ use Adelf\CoolRPG\Stats\Player\Stats;
 
 class CoolPlayer extends Persona
 {
-    /** @var Stats */
-    protected $stats;
     protected $bag;
-    /** @var EquipsControl */
-    protected $equips;
 
     /**
      * CoolPlayer constructor.
@@ -28,13 +24,6 @@ class CoolPlayer extends Persona
         $this->stats->initCommonAttributes();
         $this->stats->calculateMaxLife();
         $this->stats->life()->changeCurrentLife($this->stats->life()->getMaxLife());
-    }
-
-    public function getDefenseValue() : int
-    {
-        $defenseModify = is_null($this->equips->getShield()) ? 0 : $this->equips->getShield()->getDefenseModify();
-
-        return $this->stats->getDefenseValue($defenseModify);
     }
 
     public function defineBag(Bag $bag)
@@ -57,10 +46,5 @@ class CoolPlayer extends Persona
     public function bag() : Bag
     {
         return $this->bag;
-    }
-
-    public function equips() : EquipsControl
-    {
-        return $this->equips;
     }
 }

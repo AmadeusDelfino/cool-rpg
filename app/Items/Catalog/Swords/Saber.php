@@ -2,7 +2,7 @@
 
 namespace Adelf\CoolRPG\Items\Catalog\Swords;
 
-use Adelf\CoolRPG\Dices\D6;
+use Adelf\CoolRPG\Dices\D10;
 use Adelf\CoolRPG\Interfaces\Dice;
 
 class Saber extends Base
@@ -15,7 +15,7 @@ class Saber extends Base
 
     public function damageDice(): Dice
     {
-        return new D6();
+        return new D10();
     }
 
     public function size(): string

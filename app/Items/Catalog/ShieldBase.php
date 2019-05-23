@@ -22,7 +22,7 @@ abstract class ShieldBase extends WeaponBase implements Weapon, Shield
      *
      * @return ShieldBase
      */
-    public function setDefenseModify(int $defenseModify)
+    public function setDefenseModify(int $defenseModify) : ShieldBase
     {
         $this->defenseModify = $defenseModify;
 

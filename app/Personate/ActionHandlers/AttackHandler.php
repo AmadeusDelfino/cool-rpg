@@ -3,11 +3,12 @@
 namespace Adelf\CoolRPG\Personate\ActionHandlers;
 
 use Adelf\CoolRPG\Effects\PlayerEffect;
+use Adelf\CoolRPG\Interfaces\ActionHandler;
 use Adelf\CoolRPG\Personate\Actions\AttackAction;
 use Adelf\CoolRPG\Personate\ActionsResults\AttackResult;
 use Adelf\CoolRPG\Stats\Base;
 
-class AttackHandler
+class AttackHandler implements ActionHandler
 {
     public function __invoke($args) : AttackResult
     {
@@ -40,7 +41,7 @@ class AttackHandler
         return $result;
     }
 
-    private function defineModifiesByWeapon(AttackAction $action, Base $stats)
+    private function defineModifiesByWeapon(AttackAction $action, Base $stats) : AttackAction
     {
         if($action->getItem()->isFinesse()) {
             $action

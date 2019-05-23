@@ -20,12 +20,12 @@ abstract class Base extends ItemBase implements Bag
         $this->itemList = new ItemsList();
     }
 
-    public function get($indexItem = null): Item
+    public function get(int $indexItem): Item
     {
         return $this->itemList->items()[$indexItem];
     }
 
-    public function add($item): Bag
+    public function add(Item $item): Bag
     {
         $this
             ->itemList
@@ -34,7 +34,7 @@ abstract class Base extends ItemBase implements Bag
         return $this;
     }
 
-    public function remove($indexItem): Bag
+    public function remove(int $indexItem): Bag
     {
         $this
             ->itemList
@@ -66,7 +66,7 @@ abstract class Base extends ItemBase implements Bag
 
     public function effects() : array
     {
-        return [new PlayerEffect()];
+        return [];
     }
 
     public function remainingSpace() : int

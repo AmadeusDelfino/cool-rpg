@@ -2,7 +2,7 @@
 
 namespace Adelf\CoolRPG\Items\Catalog\Swords;
 
-use Adelf\CoolRPG\Dices\D6;
+use Adelf\CoolRPG\Dices\D8;
 use Adelf\CoolRPG\Interfaces\Dice;
 
 class ShortSword extends Base
@@ -12,7 +12,7 @@ class ShortSword extends Base
 
     public function damageDice(): Dice
     {
-        return new D6();
+        return new D8();
     }
 
     public function size(): string

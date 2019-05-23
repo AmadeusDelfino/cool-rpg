@@ -4,16 +4,16 @@ namespace Adelf\CoolRPG\Generator\Player;
 
 use Adelf\Config\Config;
 use Adelf\CoolRPG\Player\CoolPlayer;
+use function var_dump;
 
 class Generate
 {
     public function __invoke() : CoolPlayer
     {
         $defaultBag = Config::instance()->get('items.new_player.bag');
-
         $player = new CoolPlayer();
-
         $player->defineBag(new $defaultBag());
+
         $this->addDefaultItems($player);
         $this->addDefaultGolden($player);
 

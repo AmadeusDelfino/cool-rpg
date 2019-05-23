@@ -79,7 +79,7 @@ abstract class Base implements Item
     {
     }
 
-    public function makeItemMagic()
+    public function makeItemMagic() : Base
     {
         $this->isMagic = true;
 

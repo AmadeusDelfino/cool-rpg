@@ -2,8 +2,10 @@
 
 namespace Adelf\CoolRPG\Personate;
 
+use Adelf\CoolRPG\Effects\PlayerEffect;
 use Adelf\CoolRPG\Exceptions\ActionDontExistsException;
 use Adelf\CoolRPG\Effects\Base as Effect;
+use Adelf\CoolRPG\Interfaces\Bag;
 use Adelf\CoolRPG\Personate\EffectApply\Handler;
 use Adelf\CoolRPG\Personate\Equips\EquipsControl;
 use Adelf\CoolRPG\Stats\Base;
@@ -17,6 +19,8 @@ abstract class Persona
     protected $stats;
     /** @var EquipsControl */
     protected $equips;
+    /** @var Bag */
+    protected $bag;
 
 
     public function __construct()
@@ -42,9 +46,14 @@ abstract class Persona
         return (new ActionBus())($action, $args);
     }
 
-    public function applyEffects(Effect $effect)
+    public function applyEffects($effects)
     {
-        (new Handler())($this, $effect);
+        foreach($effects as $effect){
+            if($effect instanceof PlayerEffect) {
+                (new Handler())($this, $effect);
+                break;
+            }
+        }
 
         return $this;
     }
@@ -59,5 +68,10 @@ abstract class Persona
     public function equips() : EquipsControl
     {
         return $this->equips;
+    }
+
+    public function bag() : Bag
+    {
+        return $this->bag;
     }
 }

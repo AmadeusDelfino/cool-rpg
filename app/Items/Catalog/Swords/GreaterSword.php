@@ -2,7 +2,7 @@
 
 namespace Adelf\CoolRPG\Items\Catalog\Swords;
 
-use Adelf\CoolRPG\Dices\D10;
+use Adelf\CoolRPG\Dices\D14;
 use Adelf\CoolRPG\Interfaces\Dice;
 
 class GreaterSword extends Base
@@ -16,6 +16,6 @@ class GreaterSword extends Base
 
     public function damageDice(): Dice
     {
-        return new D10();
+        return new D14();
     }
 }

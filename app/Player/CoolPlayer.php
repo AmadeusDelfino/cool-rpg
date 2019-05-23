@@ -9,8 +9,6 @@ use Adelf\CoolRPG\Stats\Player\Stats;
 
 class CoolPlayer extends Persona
 {
-    protected $bag;
-
     /**
      * CoolPlayer constructor.
      *

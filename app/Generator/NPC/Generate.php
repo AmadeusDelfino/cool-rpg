@@ -6,10 +6,8 @@ use Adelf\CoolRPG\NPC\CoolNPC;
 
 class Generate
 {
-    public function __invoke()
+    public function __invoke() : CoolNPC
     {
-        $npc = new CoolNPC();
-
-        return $npc;
+        return new CoolNPC();
     }
 }

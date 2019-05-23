@@ -2,25 +2,27 @@
 
 namespace Adelf\CoolRPG\Effects\Changes;
 
-abstract class Base
-{
-    protected $value = 0;
+use Adelf\CoolRPG\Interfaces\EffectChanges;
 
-    public function increase(float $value)
+abstract class Base implements EffectChanges
+{
+    protected $value = 0.0;
+
+    public function increase(float $value) : Base
     {
         $this->value += $value;
 
         return $this;
     }
 
-    public function decrease(float $value)
+    public function decrease(float $value) : Base
     {
         $this->value -= $value;
 
         return $this;
     }
 
-    public function value()
+    public function value() : float
     {
         return $this->value;
     }

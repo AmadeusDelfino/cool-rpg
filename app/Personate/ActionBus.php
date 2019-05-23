@@ -3,6 +3,8 @@
 namespace Adelf\CoolRPG\Personate;
 
 use Adelf\CoolRPG\Exceptions\ActionDontExistsException;
+use Adelf\CoolRPG\Interfaces\ActionHandler;
+use Adelf\CoolRPG\Interfaces\ActionResult;
 use Adelf\CoolRPG\Personate\ActionHandlers\AttackHandler;
 use Adelf\CoolRPG\Traits\InstanceOfClass;
 
@@ -24,7 +26,7 @@ class ActionBus
      *
      * @return mixed
      */
-    public function __invoke($action, ?array $args)
+    public function __invoke($action, ?array $args = null): ActionResult
     {
         $this->validateIfActionExists($action);
 

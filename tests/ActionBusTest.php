@@ -50,7 +50,7 @@ class ActionBusTest extends TestCase
     public function test_if_attack_action_works(ActionBus $bus, WeaponBase $weapon)
     {
         /** @var AttackResult $result */
-        $result = $bus('attack', ['item'=> $weapon, 'persona_stats' => new Stats()]);
+        $result = $bus(ActionBus::ATTACK_ACTION, ['item'=> $weapon, 'persona_stats' => new Stats()]);
 
         $this->assertEquals($weapon->damageType(), $result->getDamageType());
         $this->assertNotEquals(0, $result->getHit());
